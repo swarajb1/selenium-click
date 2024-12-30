@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "selenium-click"
+version = "0.1.0"
+description = ""
+authors = ["mac <bisane.swaraj@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+selenium = "^4.27.1"
+pre-commit = "^4.0.1"
+starlette = "^0.45.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.10.4"
+pydantic-settings = "^2.7.0"
+pyautogui = "^0.9.54"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+mypy = "^1.14.0"
+pytest = "^8.3.4"
+flake8 = "^7.1.1"
+autoflake = "^2.3.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
