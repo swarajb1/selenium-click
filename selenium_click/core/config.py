@@ -3,6 +3,7 @@ from enum import StrEnum, auto
 from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
+from enums import PurposeEnum
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from starlette.config import Config
@@ -28,7 +29,9 @@ class GlobalConfig(BaseSettings):
 
     FLAVOUR: EnvFlavour = Field(default=EnvFlavour.dev)
 
-    SINGLE_CLICK_TIME_SECONDS: int = Field(default=10)
+    SINGLE_CLICK_TIME_SECONDS: int = Field(default=20)
+
+    PURPOSE: PurposeEnum = Field(default=PurposeEnum.SINGLE_CLICK)
 
     DEBUG: bool = Field(default=False)
     LOGGING_LEVEL: int = logging.DEBUG if DEBUG else logging.INFO

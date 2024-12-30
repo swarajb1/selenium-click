@@ -1,5 +1,6 @@
 from enum import Enum
 
 
-class Purpose(Enum):
+class PurposeEnum(Enum):
     SINGLE_CLICK = "Single Click"
+    SINGLE_CLICK_2 = "Single Click 2"
